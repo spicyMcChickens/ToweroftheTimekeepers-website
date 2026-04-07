@@ -1,0 +1,970 @@
+
+
+Skip to content
+Using SJSU Mail with screen readers
+Enable desktop notifications for SJSU Mail.
+   OK  No thanks
+
+1 of 4,511
+(no subject)
+Inbox
+
+Kevin Williams <kevin.m.williams@sjsu.edu>
+Attachments
+9:21 PM (11 minutes ago)
+to me
+
+
+-----
+
+All the best,
+
+ 
+
+Kevin M. Williams
+
+kevin.m.williams@sjsu.edu
+
+Cell (669) 302-9196
+
+
+
+
+
+
+
+ One attachment
+  •  Scanned by Gmail
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Tower of the Timekeepers</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --gold: #c8a84b;
+  --gold-light: #e8cc7a;
+  --gold-dim: #7a6128;
+  --dark: #080608;
+  --deep: #0e0a10;
+  --mid: #1a1220;
+  --panel: #120e18;
+  --text: #d4c8b0;
+  --muted: #7a6e5e;
+  --accent: #4a2d6e;
+  --teal: #1a6e6e;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--dark);
+  color: var(--text);
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+/* STARFIELD */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(200,168,75,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 25% 60%, rgba(255,255,255,0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 40% 10%, rgba(255,255,255,0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 80%, rgba(200,168,75,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 35%, rgba(255,255,255,0.1) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 55%, rgba(255,255,255,0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 15% 85%, rgba(255,255,255,0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 92% 15%, rgba(200,168,75,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 33% 45%, rgba(255,255,255,0.1) 0%, transparent 100%),
+    radial-gradient(1px 1px at 78% 70%, rgba(255,255,255,0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 25%, rgba(200,168,75,0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 5% 50%, rgba(255,255,255,0.15) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+  animation: twinkle 8s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  background: linear-gradient(to bottom, rgba(8,6,8,0.98), transparent);
+  border-bottom: 1px solid rgba(200,168,75,0.15);
+}
+
+.nav-logo {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover { color: var(--gold); }
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 600px; height: 600px;
+  background: radial-gradient(ellipse, rgba(74,45,110,0.4) 0%, transparent 70%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -60%);
+  pointer-events: none;
+  animation: pulse-glow 6s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+  0% { opacity: 0.5; transform: translate(-50%, -60%) scale(1); }
+  100% { opacity: 1; transform: translate(-50%, -60%) scale(1.1); }
+}
+
+/* WATCH SVG hero */
+.hero-watch {
+  position: relative;
+  width: 180px; height: 180px;
+  margin-bottom: 2.5rem;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.hero-watch svg { width: 100%; height: 100%; }
+
+.watch-ring {
+  animation: rotate-slow 60s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.hero-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--gold);
+  text-shadow: 0 0 60px rgba(200,168,75,0.4);
+  margin-bottom: 0.4rem;
+}
+
+.hero-sub {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.85rem, 2vw, 1.1rem);
+  letter-spacing: 0.3em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.hero-divider {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  margin: 0 auto 2rem;
+}
+
+.hero-quote {
+  max-width: 560px;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: rgba(212,200,176,0.7);
+  margin-bottom: 3rem;
+  line-height: 1.9;
+}
+
+.hero-cta {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--dark);
+  background: var(--gold);
+  padding: 1rem 2.8rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+}
+
+.hero-cta:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(200,168,75,0.4);
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+  animation: bob 2s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+/* SECTIONS */
+section {
+  position: relative;
+  z-index: 1;
+  padding: 6rem 2rem;
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 0.6rem;
+}
+
+.section-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.divider {
+  width: 80px; height: 1px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  margin-bottom: 2.5rem;
+}
+
+/* LORE SECTION */
+.lore-section { background: linear-gradient(to bottom, var(--dark), var(--deep)); }
+
+.lore-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.lore-text p { margin-bottom: 1.2rem; color: var(--text); }
+
+.lore-callout {
+  background: rgba(200,168,75,0.06);
+  border-left: 2px solid var(--gold);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.warning-box {
+  background: rgba(110,20,20,0.25);
+  border: 1px solid rgba(200,68,68,0.3);
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #e8a0a0;
+}
+
+.warning-box strong { color: #ff8080; font-family: 'Cinzel', serif; letter-spacing: 0.1em; }
+
+/* HOW TO ENTER */
+.enter-section { background: var(--deep); }
+
+.enter-steps { display: flex; flex-direction: column; gap: 2rem; margin-top: 2rem; }
+
+.step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(200,168,75,0.12);
+  padding: 1.8rem;
+  transition: border-color 0.3s;
+}
+
+.step:hover { border-color: rgba(200,168,75,0.4); }
+
+.step-num {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2rem;
+  color: var(--gold-dim);
+  line-height: 1;
+  min-width: 2rem;
+}
+
+.step-content h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+.password-glyph {
+  font-size: 1.4rem;
+  letter-spacing: 0.2em;
+  color: var(--gold-light);
+  background: rgba(200,168,75,0.08);
+  padding: 0.4rem 1rem;
+  display: inline-block;
+  margin-top: 0.5rem;
+  border: 1px solid rgba(200,168,75,0.2);
+}
+
+/* FACULTY */
+.faculty-section { background: linear-gradient(to bottom, var(--deep), var(--panel)); }
+
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.faculty-card {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(200,168,75,0.1);
+  padding: 2rem;
+  transition: all 0.35s;
+  position: relative;
+  overflow: hidden;
+}
+
+.faculty-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  transform: scaleX(0);
+  transition: transform 0.4s;
+}
+
+.faculty-card:hover::before { transform: scaleX(1); }
+.faculty-card:hover { border-color: rgba(200,168,75,0.35); transform: translateY(-3px); }
+
+.faculty-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.05rem;
+  color: var(--gold);
+  margin-bottom: 0.2rem;
+}
+
+.faculty-title {
+  font-size: 0.8rem;
+  color: var(--gold-dim);
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* DEAN SPECIAL */
+.faculty-card.dean {
+  border-color: rgba(200,168,75,0.4);
+  background: rgba(200,168,75,0.06);
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+.dean-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(200,168,75,0.1);
+  font-size: 3rem;
+}
+
+/* COURSES */
+.courses-section { background: var(--panel); }
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.course-card {
+  border: 1px solid rgba(200,168,75,0.12);
+  padding: 1.6rem;
+  background: rgba(255,255,255,0.018);
+  transition: all 0.3s;
+}
+
+.course-card:hover {
+  border-color: rgba(200,168,75,0.3);
+  background: rgba(200,168,75,0.04);
+}
+
+.course-code {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--gold-dim);
+  margin-bottom: 0.3rem;
+}
+
+.course-name {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+
+.course-card.restricted {
+  border-color: rgba(180,40,40,0.3);
+  background: rgba(120,20,20,0.12);
+}
+
+.course-card.restricted .course-code { color: #c06060; }
+.course-card.restricted .course-name { color: #e09090; }
+
+.restricted-tag {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: rgba(180,40,40,0.3);
+  color: #ff9090;
+  padding: 0.2rem 0.6rem;
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
+
+/* CLUBS */
+.clubs-section { background: linear-gradient(to bottom, var(--panel), var(--deep)); }
+
+.clubs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.club-card {
+  padding: 1.6rem;
+  border: 1px solid rgba(200,168,75,0.1);
+  background: rgba(255,255,255,0.02);
+  transition: all 0.3s;
+}
+
+.club-card:hover { border-color: rgba(200,168,75,0.3); }
+
+.club-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+
+.club-name {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.club-card.secret {
+  border-color: rgba(100,50,150,0.3);
+  background: rgba(60,20,90,0.15);
+}
+
+.club-card.secret .club-name { color: #b080e0; }
+
+.secret-tag {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  background: rgba(100,50,150,0.3);
+  color: #c090ff;
+  padding: 0.2rem 0.5rem;
+  display: inline-block;
+  margin-bottom: 0.6rem;
+}
+
+/* DIVERSITY */
+.diversity-section { background: var(--deep); }
+
+/* LOCATION */
+.location-section { background: linear-gradient(to bottom, var(--deep), var(--dark)); }
+
+.location-box {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(200,168,75,0.15);
+  padding: 2.5rem;
+  margin-top: 2rem;
+}
+
+/* APPLY */
+.apply-section {
+  background: var(--dark);
+  text-align: center;
+  padding: 8rem 2rem;
+}
+
+.apply-glyph {
+  font-size: 3rem;
+  color: var(--gold-dim);
+  margin-bottom: 1.5rem;
+  display: block;
+  animation: pulse-glow2 3s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glyph {
+  0% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+@keyframes pulse-glow2 {
+  0% { text-shadow: 0 0 20px rgba(200,168,75,0.2); }
+  100% { text-shadow: 0 0 40px rgba(200,168,75,0.6); }
+}
+
+.apply-warning {
+  max-width: 600px;
+  margin: 2rem auto;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  border-top: 1px solid rgba(200,168,75,0.1);
+  padding: 2rem 3rem;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--gold-dim);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { gap: 1.2rem; }
+  .nav-links a { font-size: 0.65rem; letter-spacing: 0.08em; }
+  .lore-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .faculty-card.dean { grid-template-columns: 1fr; }
+  .dean-badge { min-height: 120px; }
+  section { padding: 4rem 1.2rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">⧗ Tower of the Timekeepers</div>
+  <ul class="nav-links">
+    <li><a href="#lore">History</a></li>
+    <li><a href="#enter">Entrance</a></li>
+    <li><a href="#faculty">Faculty</a></li>
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#clubs">Clubs</a></li>
+    <li><a href="#apply">Apply</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+
+  <div class="hero-watch">
+    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- chain -->
+      <ellipse cx="90" cy="18" rx="6" ry="3.5" stroke="#7a6128" stroke-width="1.4" transform="rotate(-20,90,18)"/>
+      <ellipse cx="90" cy="12" rx="5" ry="3" stroke="#7a6128" stroke-width="1.2" transform="rotate(20,90,12)"/>
+      <!-- crown -->
+      <rect x="80" y="22" width="20" height="10" rx="4" fill="#1a1220" stroke="#c8a84b" stroke-width="1.4"/>
+      <!-- outer ring -->
+      <circle class="watch-ring" cx="90" cy="105" r="68" stroke="#c8a84b" stroke-width="1" stroke-dasharray="6 4" opacity="0.5"/>
+      <!-- watch body -->
+      <circle cx="90" cy="105" r="62" fill="#0e0a10" stroke="#c8a84b" stroke-width="2.2"/>
+      <circle cx="90" cy="105" r="56" fill="none" stroke="#7a6128" stroke-width="0.8"/>
+      <!-- era ticks -->
+      <line x1="90" y1="50" x2="90" y2="58" stroke="#c8a84b" stroke-width="2"/>
+      <line x1="118" y1="58" x2="113" y2="64" stroke="#c8a84b" stroke-width="1.5"/>
+      <line x1="136" y1="84" x2="129" y2="87" stroke="#c8a84b" stroke-width="1.5"/>
+      <line x1="145" y1="105" x2="138" y2="105" stroke="#c8a84b" stroke-width="2"/>
+      <line x1="136" y1="126" x2="129" y2="123" stroke="#c8a84b" stroke-width="1.5"/>
+      <line x1="118" y1="152" x2="113" y2="146" stroke="#c8a84b" stroke-width="1.5"/>
+      <line x1="90" y1="160" x2="90" y2="152" stroke="#c8a84b" stroke-width="2"/>
+      <line x1="62" y1="152" x2="67" y2="146" stroke="#c8a84b" stroke-width="1.5"/>
+      <line x1="44" y1="126" x2="51" y2="123" stroke="#c8a84b" stroke-width="1.5"/>
+      <line x1="35" y1="105" x2="42" y2="105" stroke="#c8a84b" stroke-width="2"/>
+      <line x1="44" y1="84" x2="51" y2="87" stroke="#c8a84b" stroke-width="1.5"/>
+      <line x1="62" y1="58" x2="67" y2="64" stroke="#c8a84b" stroke-width="1.5"/>
+      <!-- era labels -->
+      <text x="90" y="47" text-anchor="middle" font-family="'Cinzel',serif" font-size="6" fill="#c8a84b">PRESENT</text>
+      <text x="90" y="167" text-anchor="middle" font-family="'Cinzel',serif" font-size="6" fill="#c8a84b">BC/AD</text>
+      <text x="150" y="108" text-anchor="start" font-family="'Cinzel',serif" font-size="5.5" fill="#7a6128">MEDIEVAL</text>
+      <text x="30" y="108" text-anchor="end" font-family="'Cinzel',serif" font-size="5.5" fill="#7a6128">ANCIENT</text>
+      <!-- center -->
+      <circle cx="90" cy="105" r="8" fill="none" stroke="#c8a84b" stroke-width="1" stroke-dasharray="3 2"/>
+      <circle cx="90" cy="105" r="4" fill="#c8a84b" opacity="0.8"/>
+      <!-- hourglass center icon -->
+      <path d="M85,97 L95,97 L90,103 L95,113 L85,113 L90,103 Z" fill="none" stroke="#c8a84b" stroke-width="0.8" opacity="0.6"/>
+    </svg>
+  </div>
+
+  <p class="hero-eyebrow">San José State University — Hidden Division</p>
+  <h1>Tower of the<br/>Timekeepers</h1>
+  <p class="hero-sub">Defenders of the Timeline</p>
+  <div class="hero-divider"></div>
+  <p class="hero-quote">"History does not correct itself. That is what we are for."</p>
+  <a href="#lore" class="hero-cta">Enter the Tower</a>
+  <div class="scroll-hint">↓ &nbsp; scroll to descend &nbsp; ↓</div>
+</section>
+
+<!-- LORE -->
+<section class="lore-section" id="lore">
+  <div class="section-inner">
+    <p class="section-label">Origins</p>
+    <h2 class="section-title">A History Beyond History</h2>
+    <div class="divider"></div>
+    <div class="lore-grid">
+      <div class="lore-text">
+        <p>When San José State University was founded in 1857, the public record told one story. The Tower of the Timekeepers tells another.</p>
+        <p>For centuries before SJSU existed, a single unified wizard school operated in secrecy beneath the skin of ordinary reality — correcting timeline disruptions caused by powerful magic, war, invention, and human interference. As civilization accelerated, these disruptions became more frequent and more dangerous.</p>
+        <p>The Tower was established as the most secretive and advanced division within that school. Hidden inside what the world now knows as Tower Hall, it exists not in ordinary space but within a stabilized dimension anchored to the building — expansive, ancient, and completely invisible to the uninitiated.</p>
+        <div class="lore-callout">
+          "The majority of wizards will never know we exist. That is not failure — that is the mission."
+        </div>
+        <p>The Tower's purpose is singular: to guard the integrity of history itself. Its students are trained to detect pivotal disruptions — moments where a single event could spiral into widespread ruin. When necessary, Timekeepers are permitted to intervene. Every action is calculated. Every consequence is carried.</p>
+      </div>
+      <div class="lore-text">
+        <p>Not every graduate has remained worthy. Some of the Tower's most gifted alumni — chosen for discipline and pure intent — eventually lost their way. Prolonged exposure to time magic altered their judgment. Their purpose shifted from service to control.</p>
+        <p>This is why the Tower does not simply train wizards. It forms them. Tests them. Watches them continuously — even after they leave.</p>
+        <div class="warning-box">
+          <strong>⚠ A Choice That Cannot Be Undone</strong><br/><br/>
+          If you choose to join, your friends and professors will forget you.<br/>
+          If you decline, you will forget you were ever chosen.<br/><br/>
+          There is no middle ground. There is no going back.
+        </div>
+        <p style="margin-top:1.5rem;">The Tower does not recruit. It <em>recognizes</em>. If you are reading this, the observation period has already begun.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO ENTER -->
+<section class="enter-section" id="enter">
+  <div class="section-inner">
+    <p class="section-label">Location & Access</p>
+    <h2 class="section-title">Finding the Tower</h2>
+    <div class="divider"></div>
+    <p style="max-width:680px; margin-bottom:2rem;">The entrance is accessed through Tower Hall on the campus of San José State University — a building that appears completely ordinary to the public. It is a wizard school hidden within another wizard school. The Silicon Valley skyline surrounds it. No one suspects a thing.</p>
+
+    <div class="enter-steps">
+      <div class="step">
+        <div class="step-num">I</div>
+        <div class="step-content">
+          <h3>Be Observed</h3>
+          <p>Entry cannot be requested. Worthy students are identified through an extended period of silent observation. Your actions, intentions, and moral clarity are assessed before you are ever contacted. You may already be under evaluation.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">II</div>
+        <div class="step-content">
+          <h3>Receive Your Time</h3>
+          <p>Those selected are assigned a specific entry time. This time is unique to each candidate. The appointment is not negotiable and will not be repeated.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">III</div>
+        <div class="step-content">
+          <h3>Set the Clock</h3>
+          <p>At the entrance to Tower Hall, turn the clock handles to exactly <strong style="color:var(--gold);">11:11</strong> and speak the password aloud in the ancient glyphs:</p>
+          <div class="password-glyph">Ƨөᄃяөƭ pλƨƨщσяd</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">IV</div>
+        <div class="step-content">
+          <h3>Cross the Threshold</h3>
+          <p>Upon passing through the door, you are transported into the true form of the Institute. The Tower exists within a stabilized dimension — expansive, ancient, and anchored to campus while remaining invisible to the outside world. From within, all of time is within reach.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACULTY -->
+<section class="faculty-section" id="faculty">
+  <div class="section-inner">
+    <p class="section-label">Faculty</p>
+    <h2 class="section-title">Those Who Hold the Line</h2>
+    <div class="divider"></div>
+    <div class="faculty-grid">
+
+      <div class="faculty-card dean">
+        <div class="dean-badge">⧗</div>
+        <div>
+          <div class="faculty-name">Dr. Tanja Nathanael</div>
+          <div class="faculty-title">Dean of Towerism — Ph.D. in Daylight Savings — Ultimate Authority</div>
+          <p>She is not merely the leader of the Tower. She <em>is</em> the Tower. Dr. Nathanael holds the rarest power in existence: the ability to establish final versions of reality — determining which timeline becomes the true one. This power can be invoked only once in a lifetime, and she has not yet used it.</p>
+          <p style="margin-top:1rem;">Beyond her temporal authority, she serves as Soul Seeker — able to read the hearts, spirits, and true intentions of every student before her. Initial evaluation is hers alone. Reexamination occurs every six months. No one enters the Tower without her recognition.</p>
+        </div>
+      </div>
+
+      <div class="faculty-card">
+        <div class="faculty-name">Professor Kevireon</div>
+        <div class="faculty-title">Reality Anchoring</div>
+        <p>Students under Kevireon learn to stay rooted in themselves while the fabric of time bends around them. Advanced mindfulness, emotional control, and moral clarity are taught as survival skills — because without them, time magic will corrupt the best of intentions.</p>
+      </div>
+
+      <div class="faculty-card">
+        <div class="faculty-name">Prof. Ranius</div>
+        <div class="faculty-title">Chronomantic Mastery</div>
+        <p>The combat division. Ranius teaches students to perceive an opponent's movements seconds before they happen, to accelerate the body, and to strike twice in the space of a single motion. This is time magic wielded as force — precise, disciplined, and devastating.</p>
+      </div>
+
+      <div class="faculty-card">
+        <div class="faculty-name">Prof. Uyendras</div>
+        <div class="faculty-title">Chrono Cognization</div>
+        <p>Students trained by Uyendras gain the ability to navigate time as a visible field — perceiving all possible outcomes of a single decision simultaneously. The skill is extraordinary. The psychological weight is significant. Few are ready for what they see.</p>
+      </div>
+
+      <div class="faculty-card">
+        <div class="faculty-name">Prof. Dukrius</div>
+        <div class="faculty-title">Paradox Prevention</div>
+        <p>The most consequential role in the Tower. Dukrius is responsible for detecting and neutralizing temporal paradoxes before they collapse entire timelines. Students in this track learn that the most dangerous threat to reality is not evil — it is a well-meaning mistake.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section class="courses-section" id="courses">
+  <div class="section-inner">
+    <p class="section-label">Curriculum</p>
+    <h2 class="section-title">The Course of Time</h2>
+    <div class="divider"></div>
+    <p style="margin-bottom:2rem; max-width:680px;">All students begin with TIME 101. Entry into advanced coursework requires demonstrated mastery and faculty approval. Some courses carry access restrictions that cannot be negotiated.</p>
+
+    <div class="courses-grid">
+      <div class="course-card">
+        <div class="course-code">TIME 101 — PREREQUISITE</div>
+        <div class="course-name">Reality Anchoring</div>
+        <p style="font-size:0.92rem;">The foundation of everything. Students develop advanced mindfulness and moral clarity to resist the corrupting pull of time magic. You cannot progress without passing this course.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-code">TIME 301</div>
+        <div class="course-name">Advanced Reality Anchoring</div>
+        <p style="font-size:0.92rem;">Builds on TIME 101 with complex psychological scenarios drawn from actual timeline disruption events.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-code">TIME 240 — PREREQUISITE</div>
+        <div class="course-name">Chronomantic Mastery</div>
+        <p style="font-size:0.92rem;">Combat application of time magic. Perception, acceleration, precision. Taught only within the Tower.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-code">TIME 340</div>
+        <div class="course-name">Applied Chronomantic Combat</div>
+        <p style="font-size:0.92rem;">Field-level application of combat techniques with live simulations drawn from real crisis points.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-code">TIME 210 — PREREQUISITE</div>
+        <div class="course-name">Chrono Cognization</div>
+        <p style="font-size:0.92rem;">Students learn to navigate time as a visible field and perceive multiple decision outcomes simultaneously.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-code">TIME 310</div>
+        <div class="course-name">Predictive Timeline Analysis</div>
+        <p style="font-size:0.92rem;">Advanced training in reading timeline trajectories and forecasting points of critical instability.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-code">TIME 280 — ELECTIVE</div>
+        <div class="course-name">Memory & Timeline Stability</div>
+        <p style="font-size:0.92rem;">Trains students to preserve their identity when timelines shift — preventing confusion, memory loss, or psychological collapse.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-code">TIME 275 — ELECTIVE</div>
+        <div class="course-name">Temporal Ethics</div>
+        <p style="font-size:0.92rem;">Explores the moral consequences of altering time. Widely regarded as the most philosophically demanding course in the Tower.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-code">TIME 290 — ELECTIVE</div>
+        <div class="course-name">Multiversal Navigation</div>
+        <p style="font-size:0.92rem;">Introduces alternate timelines and parallel outcomes. Teaches students to navigate safely without becoming lost between realities.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-code">TIME 330 — ELECTIVE</div>
+        <div class="course-name">Crisis Point Intervention</div>
+        <p style="font-size:0.92rem;">Focuses on critical historical moments where intervention may be necessary — training students to act precisely and quickly under pressure.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-code">TIME 350 — ELECTIVE</div>
+        <div class="course-name">Controlled Time Travel Practicum</div>
+        <p style="font-size:0.92rem;">Supervised participation in limited timeline interventions. The closest students come to real deployment before graduation.</p>
+      </div>
+      <div class="course-card restricted">
+        <div class="restricted-tag">⚠ Restricted Access</div>
+        <div class="course-code">TIME 401 — THESIS / MILESTONE</div>
+        <div class="course-name">Paradox Prevention — The Tower</div>
+        <p style="font-size:0.92rem;">Elite. Invitation only. Students detect and neutralize temporal paradoxes that could collapse entire timelines. Only the most trusted are permitted entry. This is the capstone of everything the Tower stands for.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLUBS -->
+<section class="clubs-section" id="clubs">
+  <div class="section-inner">
+    <p class="section-label">Life Inside the Tower</p>
+    <h2 class="section-title">Organizations & Activities</h2>
+    <div class="divider"></div>
+    <div class="clubs-grid">
+      <div class="club-card">
+        <div class="club-icon">⚔</div>
+        <div class="club-name">The Timekeeper's Trials</div>
+        <p style="font-size:0.9rem;">A school-wide competition where students test their strength, control, and mastery of time magic against one another. The most anticipated event of the year.</p>
+      </div>
+      <div class="club-card">
+        <div class="club-icon">🧵</div>
+        <div class="club-name">Fashion Across Timelines</div>
+        <p style="font-size:0.9rem;">Students collect and present clothing recovered from different timelines — past, future, and alternate realities. Equal parts scholarship and spectacle.</p>
+      </div>
+      <div class="club-card">
+        <div class="club-icon">📜</div>
+        <div class="club-name">Timeline Research Club</div>
+        <p style="font-size:0.9rem;">A scholarly group dedicated to studying alternate timelines and observing significant events to better understand temporal variation. Alumni activity is continuously monitored.</p>
+      </div>
+      <div class="club-card">
+        <div class="club-icon">⚙</div>
+        <div class="club-name">ChronoGear Crafting</div>
+        <p style="font-size:0.9rem;">A hands-on group focused on creating and experimenting with time-based artifacts. Developing the tools that Timekeepers will carry into the field.</p>
+      </div>
+      <div class="club-card">
+        <div class="club-icon">🎪</div>
+        <div class="club-name">The Carnival of Timelines</div>
+        <p style="font-size:0.9rem;">A periodic Tower event where students present objects recovered from different timelines, offering a glimpse into worlds beyond their own.</p>
+      </div>
+      <div class="club-card secret">
+        <div class="secret-tag">⬡ unverified</div>
+        <div class="club-name">The Untethered</div>
+        <p style="font-size:0.9rem;">Rumored to exist. Students who have abandoned Reality Anchoring and believe time magic should be used without restriction. Their recruitment efforts are considered a Tower security threat. No official comment has been made.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVERSITY -->
+<section class="diversity-section">
+  <div class="section-inner" style="max-width:760px; text-align:center;">
+    <p class="section-label">Who Is Welcome</p>
+    <h2 class="section-title">Everyone Who Is Ready</h2>
+    <div class="divider" style="margin:0 auto 2.5rem;"></div>
+    <p style="font-size:1.1rem; line-height:1.9; margin-bottom:1.5rem;">The Tower does not sort by bloodline. It does not screen by origin, identity, or background. Magic is not something you are born into — it is something you commit to, develop, and choose to wield responsibly.</p>
+    <p style="font-size:1.1rem; line-height:1.9;">What the Tower looks for is simpler and rarer than any genetic gift: <strong style="color:var(--gold); font-weight:500;">pure intent</strong>. The willingness to carry an enormous responsibility without using it for personal gain. The diversity of perspective, experience, and identity that our students bring is not a side effect of inclusion — it is central to solving problems that span all of human history.</p>
+    <div class="lore-callout" style="margin:2.5rem auto; max-width:520px; text-align:left;">
+      "The timeline does not care where you are from. It only cares what you choose to do."
+    </div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section class="apply-section" id="apply">
+  <div class="section-inner" style="max-width:700px; margin:0 auto; text-align:center;">
+    <span class="apply-glyph">Ƨ</span>
+    <p class="section-label" style="text-align:center;">The Decision</p>
+    <h2 class="section-title">You Have Already Been Chosen</h2>
+    <div class="divider" style="margin:0 auto 2rem;"></div>
+    <p style="font-size:1.1rem; line-height:1.9; margin-bottom:1.5rem;">There is no application. There is no audition. If you have found your way to this page, the observation has already taken place. Dr. Nathanael has already seen you.</p>
+    <p style="font-size:1.1rem; line-height:1.9;">What comes next is a choice — and it is the only one that matters.</p>
+    <div class="apply-warning">
+      If you join, the life you knew will continue without you in it.<br/>
+      Your friends will not remember you were chosen.<br/>
+      Your professors will not hold your seat.<br/><br/>
+      If you decline, you will wake tomorrow with no memory of the Tower,<br/>
+      no knowledge of what you were offered,<br/>
+      and no awareness that time itself needed you.
+    </div>
+    <p style="font-size:1rem; color:var(--gold-dim); font-style:italic; margin-bottom:3rem;">Only those with pure intent and an awareness of the devastating responsibility before them may proceed.</p>
+    <a href="#enter" class="hero-cta">I Am Ready</a>
+  </div>
+</section>
+
+<footer>
+  <p>⧗ &nbsp; Tower of the Timekeepers &nbsp; · &nbsp; Est. Before Time Itself &nbsp; · &nbsp; Hidden within San José State University</p>
+  <p style="margin-top:0.5rem; opacity:0.5;">This document will not be remembered by those who are not worthy.</p>
+</footer>
+
+</body>
+</html>
+tower.html
+Displaying tower.html.
